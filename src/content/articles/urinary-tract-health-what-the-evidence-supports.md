@@ -3,8 +3,8 @@ title: Urinary Tract Health: Prevention That Has Evidence Behind It
 description: Cranberry, water, D-mannose, probiotics, hygiene advice. Some of it works, some of it does not, and the popular advice is not always the supported advice.
 date: 2026-08-28
 order: 4
-image: 1620877138710-e086a5f24b46
-image_alt: A clear glass pitcher beside a drinking glass
+image: 1756312177990-d771bfeaa030
+image_alt: A woman filling a glass with water at a kitchen sink
 ---
 Urinary tract infections are among the most common bacterial infections in adults, and recurrent infections affect a large share of the women who get one. The market for prevention is correspondingly large. Much of what it sells has thin evidence. A few things hold up. Here is the sorted list.
 
