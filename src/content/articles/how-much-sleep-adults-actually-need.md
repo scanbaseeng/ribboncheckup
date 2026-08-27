@@ -3,8 +3,8 @@ title: How Much Sleep Adults Actually Need, and How to Tell If You Are Getting I
 description: The seven to nine hour figure is real, but most people judge their sleep wrong. What the research measures, why short sleepers overestimate, and the signs that matter more than the clock.
 date: 2026-08-29
 order: 2
-image: 1658506957388-8346aa2c6f6b
-image_alt: Morning light falling across an unmade bed
+image: 1601276174812-63280a55656e
+image_alt: Morning light across white bed sheets
 ---
 Adults are told to sleep seven to nine hours. Most say they get about seven. Wrist trackers and sleep lab measurements say the real average is closer to six and a half, and that the gap between what people report and what they get widens the less they sleep.
 

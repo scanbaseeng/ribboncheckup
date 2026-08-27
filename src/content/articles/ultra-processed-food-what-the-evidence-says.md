@@ -3,8 +3,8 @@ title: Ultra Processed Food: What the Evidence Actually Says
 description: The term is everywhere and the studies behind it are mixed. What ultra processed means, what the strongest trial found, why the category is too broad, and how to act on it without a purity test.
 date: 2026-08-29
 order: 3
-image: 1663126949923-0923b4217c90
-image_alt: Fresh vegetables on a wooden kitchen counter
+image: 1597362925123-77861d3fbac7
+image_alt: Fresh vegetables arranged on a table
 ---
 "Ultra processed" has become the health word of the decade, applied to everything from soda to sliced bread to protein bars. The claim underneath it is that the degree of industrial processing, separate from calories, sugar, salt, or fat, is what makes modern food harmful. That claim has some real evidence behind it and a lot of noise around it.
 

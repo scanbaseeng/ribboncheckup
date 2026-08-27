@@ -3,8 +3,8 @@ title: Why Walking Is the Most Underrated Exercise
 description: It does not look like training, which is why people skip it. The evidence on walking and mortality, blood pressure, blood sugar, and mood, and the dose that actually matters.
 date: 2026-08-29
 order: 1
-image: 1728262247607-f67250f66918
-image_alt: A person walking along a tree lined path
+image: 1673434737111-193cfaa58f75
+image_alt: A tree lined path in autumn light
 ---
 Ask people what counts as exercise and they describe something that hurts: a run, a class, a barbell. Walking does not make the list. It is what you do between the things that count.
 

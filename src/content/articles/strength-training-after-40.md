@@ -3,8 +3,8 @@ title: Strength Training After 40: Why It Stops Being Optional
 description: Muscle loss starts earlier than most people think and accelerates every decade. What sarcopenia does to metabolism, balance, and independence, and why two sessions a week reverses most of it at any age.
 date: 2026-08-29
 order: 4
-image: 1661265933107-85a5dbd815af
-image_alt: A person lifting a barbell in a quiet gym
+image: 1620188526357-ff08e03da266
+image_alt: A loaded barbell on a gym floor
 ---
 Adults lose muscle from their mid 30s onward, about 3 to 8 percent per decade at first, faster after 60. Strength goes faster than size. By 80, an inactive person may have half the muscle they had at 30. The condition has a name, sarcopenia, and it is the main reason a fall at 75 is a hip fracture rather than a bruise.
 
