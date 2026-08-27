@@ -29,3 +29,5 @@ Ribbon Checkup (ribboncheckup.org) is published by Ribbon Health Press. This sit
 ## Contact
 
 Corrections, questions, and topic requests: editors@ribboncheckup.org
+
+Ribbon Health Press<br>300 Delaware Ave. Suite 210<br>Wilmington, DE 19801<br>United States
