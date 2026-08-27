@@ -12,10 +12,10 @@ PUBLISHER = "Ribbon Health Press"
 TAGLINE = "Understand your health. Make informed choices."
 
 SECTIONS = {
-    "articles":          {"name": "Articles",          "color": "blue",   "blurb": "Reported pieces on how the body works, what the evidence says, and what changed.", "hero": "1647913097114-5975d965a1ff"},
-    "guides":            {"name": "Guides",            "color": "teal",   "blurb": "Step by step. How to test, how to read a result, how to choose.", "hero": "1655913197692-012897652d13"},
-    "health-explained":  {"name": "Health Explained",  "color": "purple", "blurb": "The numbers on a lab report and a test strip, decoded one at a time.", "hero": "1630959305790-4c956ce6c0b6"},
-    "preventive-health": {"name": "Preventive Health", "color": "coral",  "blurb": "What to check, how often, and why. The screenings that change outcomes.", "hero": "1750089440313-5c6d8b5248e0"},
+    "articles":          {"name": "Articles",          "color": "blue",   "blurb": "Reported pieces on how the body works, what the evidence says about food, movement, sleep, and medicine, and what changed.", "hero": "1647913097114-5975d965a1ff"},
+    "guides":            {"name": "Guides",            "color": "teal",   "blurb": "Step by step. How to start, how to do it well, how to choose. Exercise, eating, sleep, and testing at home.", "hero": "1655913197692-012897652d13"},
+    "health-explained":  {"name": "Health Explained",  "color": "purple", "blurb": "The numbers behind your health, decoded one at a time. Lab values, fitness measures, and what normal means.", "hero": "1630959305790-4c956ce6c0b6"},
+    "preventive-health": {"name": "Preventive Health", "color": "coral",  "blurb": "What to check, how often, and why. The screenings and habits that change outcomes.", "hero": "1750089440313-5c6d8b5248e0"},
 }
 
 def md_to_html(md: str) -> str:
@@ -217,9 +217,9 @@ def build():
 
     # home
     by_sec = {k: [a for a in articles if a["section"] == k] for k in SECTIONS}
-    lead = next(a for a in articles if a["slug"] == "how-to-choose-a-urine-test-kit")
-    feat = next(a for a in articles if a["slug"] == "why-kidney-disease-is-found-late")
-    feat2 = [next(a for a in articles if a["slug"] == s) for s in ("how-to-use-home-health-tests-without-fooling-yourself", "preventive-screenings-by-decade", "how-to-take-blood-pressure-at-home")]
+    lead = next(a for a in articles if a["slug"] == "exercise-as-preventive-medicine")
+    feat = next(a for a in articles if a["slug"] == "why-walking-is-the-most-underrated-exercise")
+    feat2 = [next(a for a in articles if a["slug"] == s) for s in ("how-much-sleep-adults-actually-need", "strength-training-after-40", "why-kidney-disease-is-found-late")]
     HERO = "1606206591513-adbfbdd7a177"
     BAND = "1625690987114-86f5af994b49"
     sec_blocks = ""
@@ -235,7 +235,7 @@ def build():
   <div class="inner">
     <p class="eyebrow light">Ribbon Checkup</p>
     <h1>Understand your health.<br><span>Make informed choices.</span></h1>
-    <p class="lede light">Plain explanations of tests, numbers, and screenings. What a result means, what it does not, and when to talk to someone.</p>
+    <p class="lede light">Plain explanations of the whole of health: exercise, food, sleep, tests, numbers, and screenings. What the evidence says, what it does not, and when to talk to someone.</p>
     <div class="cta">
       <a class="btn" href="/{lead['section']}/{lead['slug']}/">Start here</a>
       <a class="btn ghost light" href="/preventive-health/">Preventive checklist</a>
@@ -258,7 +258,7 @@ def build():
 {sec_blocks}
 <section class="bleed band" style="background-image:url('{img_url(BAND, 2400)}')">
   <div class="inner">
-    <blockquote>Every piece says what a test measures, the range that counts as normal, the common reasons it reads wrong, and the point at which a home result should become a conversation with a clinician.</blockquote>
+    <blockquote>Every piece says what the evidence actually supports, where it is thin, what counts as normal, and the point at which a question about your health should become a conversation with a clinician.</blockquote>
     <p><a href="/editorial-policy/">How we write &rarr;</a></p>
   </div>
 </section>"""
