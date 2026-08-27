@@ -4,6 +4,8 @@ description: How nitrite and leukocyte strips work, how accurate they are, how t
 
 date: 2026-08-27
 order: 2
+image: 1624957866401-52b4ff88eac4
+image_alt: A gloved hand holding a urine sample tube
 ---
 Home UTI tests are the best selling urine test kit in the United States. They are also the most misread. The kits are simple. The biology is not. Here is what you are actually buying.
 

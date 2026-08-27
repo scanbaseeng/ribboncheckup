@@ -4,6 +4,8 @@ description: The buyer guide. What each type of kit measures, who it is for, and
 
 date: 2026-08-27
 order: 1
+image: 1599556147783-7edf67c327e0
+image_alt: Two capped sample tubes on a blue surface
 ---
 Most people searching for a urine test kit want one of six things. Each has its own kind of kit. Buying the wrong one is the most common mistake, and it costs more than money. It gives you a result that answers a question you did not ask.
 
