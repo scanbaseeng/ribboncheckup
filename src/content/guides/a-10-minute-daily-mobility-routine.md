@@ -3,8 +3,8 @@ title: A 10 Minute Daily Mobility Routine for People Who Sit
 description: Stiffness is mostly a use problem, not an age problem. Eight movements that take joints through their full range, why they beat static stretching for most purposes, and how to fit them into a day.
 date: 2026-08-29
 order: 4
-image: 1674675646725-5b4aca5adb21
-image_alt: A person stretching on a mat in a bright room
+image: 1641913640860-ab4c2bfb2bb0
+image_alt: Bare feet stepping onto a yoga mat
 ---
 Most adults sit for nine or more hours a day. Hips stay bent, shoulders round forward, the upper back stiffens into the shape of a laptop screen, and the ankles do nothing. Joints keep the range they use and lose the range they do not. That, more than age, is why getting off the floor becomes a project in your 50s.
 
