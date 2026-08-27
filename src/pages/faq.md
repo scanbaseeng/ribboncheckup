@@ -1,13 +1,13 @@
 ---
 title: Ribbon Checkup FAQ
-description: Answers to the questions people bring to Ribbon Checkup most often, about the site, about the Ribbon Checkup product, and about reading a urine test at home.
+description: Answers to the questions people bring to Ribbon Checkup most often, about the site and about reading a urine test at home.
 schema: faq
 ---
 ## About this site
 
 ### What is Ribbon Checkup?
 
-Ribbon Checkup is two things that share a name. Ribboncheckup.org, this site, is a health education publication from Ribbon Health Press. It explains urine tests, lab numbers, and preventive screenings in plain language. Ribboncheckup.com is the site for the Ribbon Checkup home urine test product, accounts, and support. [Which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/) explains the split.
+Ribbon Checkup is two things that share a name. Ribboncheckup.org, this site, is a health education publication from Ribbon Health Press. It explains urine tests, lab numbers, and preventive screenings in plain language. Ribboncheckup.com is the site for the Ribbon Checkup home urine test product. [Which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/) explains the split.
 
 ### Is the content on ribboncheckup.org medical advice?
 
@@ -20,24 +20,6 @@ The Ribbon Health Press editorial team. Each piece is checked against current cl
 ### Does Ribbon Checkup sell anything or use affiliate links?
 
 Not on this site. Ribboncheckup.org carries no products, no affiliate links, and no advertising. Articles describe categories of tests and do not review or recommend specific products, including any sold under the Ribbon Checkup name.
-
-## About the Ribbon Checkup product and account
-
-### Where do I log in to Ribbon Checkup?
-
-At app.ribboncheckup.com. This site has no accounts and cannot log you in.
-
-### How do I cancel or change a Ribbon Checkup subscription?
-
-Through the account and support channels at support.ribboncheckup.com. Nothing on ribboncheckup.org can change a subscription, and the editorial address does not handle those requests.
-
-### How do I reach Ribbon Checkup customer service?
-
-support.ribboncheckup.com handles orders, shipping, app problems, billing, and subscriptions.
-
-### Does the Ribbon Checkup app read urine test strips with a phone camera?
-
-This site does not review or evaluate any specific product. It does explain how app read urine tests work as a category, including what phone camera readers do well and what breaks them. See [how phone apps read urine test strips](/guides/how-phone-apps-read-urine-test-strips/).
 
 ## About urine testing at home
 
