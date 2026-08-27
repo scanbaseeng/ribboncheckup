@@ -12,10 +12,10 @@ PUBLISHER = "Ribbon Health Press"
 TAGLINE = "Understand your health. Make informed choices."
 
 SECTIONS = {
-    "articles":          {"name": "Articles",          "color": "blue",   "blurb": "Reported pieces on how the body works, what the evidence says, and what changed."},
-    "guides":            {"name": "Guides",            "color": "teal",   "blurb": "Step by step. How to test, how to read a result, how to choose."},
-    "health-explained":  {"name": "Health Explained",  "color": "purple", "blurb": "The numbers on a lab report and a test strip, decoded one at a time."},
-    "preventive-health": {"name": "Preventive Health", "color": "coral",  "blurb": "What to check, how often, and why. The screenings that change outcomes."},
+    "articles":          {"name": "Articles",          "color": "blue",   "blurb": "Reported pieces on how the body works, what the evidence says, and what changed.", "hero": "1647913097114-5975d965a1ff"},
+    "guides":            {"name": "Guides",            "color": "teal",   "blurb": "Step by step. How to test, how to read a result, how to choose.", "hero": "1655913197692-012897652d13"},
+    "health-explained":  {"name": "Health Explained",  "color": "purple", "blurb": "The numbers on a lab report and a test strip, decoded one at a time.", "hero": "1630959305790-4c956ce6c0b6"},
+    "preventive-health": {"name": "Preventive Health", "color": "coral",  "blurb": "What to check, how often, and why. The screenings that change outcomes.", "hero": "1750089440313-5c6d8b5248e0"},
 }
 
 def md_to_html(md: str) -> str:
@@ -107,6 +107,7 @@ def layout(title, description, body, url, extra_head="", kind="website", active=
 <meta property="og:image" content="{og_image or DOMAIN + "/mark.png"}">
 <meta name="twitter:card" content="{"summary_large_image" if og_image else "summary"}">
 <link rel="icon" href="/favicon.png" type="image/png">
+<link rel="alternate" type="application/rss+xml" title="{SITE_NAME}" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
@@ -134,7 +135,7 @@ def layout(title, description, body, url, extra_head="", kind="website", active=
       <div><strong>Ribbon Checkup</strong><a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/articles/ribbon-checkup-org-and-com-which-site-is-which/">.org vs .com</a><a href="/editorial-policy/">Editorial policy</a><a href="/disclaimer/">Medical disclaimer</a><a href="/privacy/">Privacy</a></div>
     </div>
   </div>
-  <p class="fine">Ribbon Checkup (ribboncheckup.org) is published by {PUBLISHER}, a Scanbase, Inc. company. Content on this site is general health information. It is not medical advice and does not replace a clinician. &copy; {year} {PUBLISHER}.</p>
+  <p class="fine">Ribbon Checkup (ribboncheckup.org) is published by {PUBLISHER}. Content on this site is general health information. It is not medical advice and does not replace a clinician. &copy; {year} {PUBLISHER}.</p>
 </footer>
 </body>
 </html>"""
@@ -207,7 +208,7 @@ def build():
     for k, s in SECTIONS.items():
         items = [a for a in articles if a["section"] == k]
         cards = "\n".join(card(a) for a in items)
-        hero_pid = items[0]["image"] if items and items[0].get("image") else None
+        hero_pid = s.get("hero") or (items[0]["image"] if items and items[0].get("image") else None)
         hero_style = f' style="background-image:url(\'{img_url(hero_pid, 2400)}\')"' if hero_pid else ""
         body = f"""<section class="bleed hero-photo small {s['color']}"{hero_style}><div class="inner"><p class="eyebrow light">Section</p><h1>{s['name']}</h1><p class="lede light">{s['blurb']}</p></div></section>
 <section class="grid">{cards}</section>"""
@@ -276,8 +277,35 @@ def build():
         body = f'<article class="post wide"><p class="eyebrow">{SITE_NAME}</p><h1>{html.escape(a["title"])}</h1><p class="lede">{html.escape(a["description"])}</p><div class="prose">{md_to_html(a["body"])}</div></article>'
         (d / "index.html").write_text(layout(f"{a['title']} | {SITE_NAME}", a["description"], body, f"{DOMAIN}/{a['slug']}/", extra))
 
-    body = '<section class="hero small"><h1>Page not found</h1><p class="lede">That link is dead. <a href="/">Back to the front page.</a></p></section>'
+    body = f"""<section class="bleed hero-photo small" style="background-image:url('{img_url('1734090127373-97bf0d4aad6e', 2400)}')"><div class="inner"><p class="eyebrow light">404</p><h1>That page is not here.</h1><p class="lede light">The link may be old or mistyped. Everything on Ribbon Checkup is reachable from the sections below.</p><div class="cta"><a class="btn" href="/">Front page</a><a class="btn ghost light" href="/glossary/">Glossary</a></div></div></section>
+<section class="pillars">{''.join(f'<a href="/{k}/" class="pillar {s["color"]}"><strong>{s["name"]}</strong><span>{s["blurb"]}</span></a>' for k, s in SECTIONS.items())}</section>"""
     (OUT / "404.html").write_text(layout(f"Not found | {SITE_NAME}", "Page not found.", body, f"{DOMAIN}/404.html"))
+
+    # RSS feed
+    latest = sorted(articles, key=lambda a: (a["date"], a["title"]), reverse=True)[:30]
+    def rss_item(a):
+        link = f"{DOMAIN}/{a['section']}/{a['slug']}/"
+        return f"""  <item>
+    <title>{html.escape(a['title'])}</title>
+    <link>{link}</link>
+    <guid isPermaLink="true">{link}</guid>
+    <pubDate>{datetime.datetime.strptime(a['date'], '%Y-%m-%d').strftime('%a, %d %b %Y 09:00:00 GMT')}</pubDate>
+    <category>{html.escape(SECTIONS[a['section']]['name'])}</category>
+    <description>{html.escape(a['description'])}</description>
+  </item>"""
+    rss = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{SITE_NAME}</title>
+  <link>{DOMAIN}/</link>
+  <atom:link href="{DOMAIN}/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>{TAGLINE} Plain explanations of urine tests, lab numbers, and preventive screenings from {PUBLISHER}.</description>
+  <language>en-us</language>
+{chr(10).join(rss_item(a) for a in latest)}
+</channel>
+</rss>
+"""
+    (OUT / "feed.xml").write_text(rss)
 
     urls = [f"{DOMAIN}/"] + [f"{DOMAIN}/{k}/" for k in SECTIONS] + [f"{DOMAIN}/{p.stem}/" for p in (SRC / "pages").glob("*.md")] + [f"{DOMAIN}/{a['section']}/{a['slug']}/" for a in articles]
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{u}</loc></url>\n" for u in urls) + "</urlset>\n")
