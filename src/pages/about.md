@@ -24,7 +24,7 @@ We are not a medical provider and nothing here is medical advice. See the [medic
 
 ## Who publishes this site
 
-Ribbon Checkup (ribboncheckup.org) is published by Ribbon Health Press, a Scanbase, Inc. company. Scanbase is a health technology company that also operates ribboncheckup.com, the product site for Ribbon Checkup home urine tests. This site is editorial. It does not sell anything. If you are looking for the product, your account, or customer support, see [Ribbon Checkup .org and .com: which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/).
+Ribbon Checkup (ribboncheckup.org) is published by Ribbon Health Press. This site is editorial. It does not sell anything. If you are looking for the Ribbon Checkup home test product, your account, or customer support, that is at ribboncheckup.com; see [Ribbon Checkup .org and .com: which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/).
 
 ## Contact
 

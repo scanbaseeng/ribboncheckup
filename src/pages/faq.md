@@ -7,7 +7,7 @@ schema: faq
 
 ### What is Ribbon Checkup?
 
-Ribbon Checkup is two things that share a name. Ribboncheckup.org, this site, is a health education publication from Ribbon Health Press, a Scanbase, Inc. company. It explains urine tests, lab numbers, and preventive screenings in plain language. Ribboncheckup.com is the product site for Ribbon Checkup home urine tests, which Scanbase also operates. [Which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/) explains the split.
+Ribbon Checkup is two things that share a name. Ribboncheckup.org, this site, is a health education publication from Ribbon Health Press. It explains urine tests, lab numbers, and preventive screenings in plain language. Ribboncheckup.com is the site for the Ribbon Checkup home urine test product, accounts, and support. [Which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/) explains the split.
 
 ### Is the content on ribboncheckup.org medical advice?
 
@@ -19,7 +19,7 @@ The Ribbon Health Press editorial team. Each piece is checked against current cl
 
 ### Does Ribbon Checkup sell anything or use affiliate links?
 
-Not on this site. Ribboncheckup.org carries no products, no affiliate links, and no advertising. Where a piece covers a category of test that Scanbase sells, a disclosure appears on that page.
+Not on this site. Ribboncheckup.org carries no products, no affiliate links, and no advertising. Articles describe categories of tests and do not review or recommend specific products, including any sold under the Ribbon Checkup name.
 
 ## About the Ribbon Checkup product and account
 
@@ -37,7 +37,7 @@ support.ribboncheckup.com handles orders, shipping, app problems, billing, and s
 
 ### Does the Ribbon Checkup app read urine test strips with a phone camera?
 
-Ribbon Checkup home tests are app read urine tests. This site does not review or evaluate them, but it does explain how the category works, including what phone camera readers do well and what breaks them. See [how phone apps read urine test strips](/guides/how-phone-apps-read-urine-test-strips/).
+This site does not review or evaluate any specific product. It does explain how app read urine tests work as a category, including what phone camera readers do well and what breaks them. See [how phone apps read urine test strips](/guides/how-phone-apps-read-urine-test-strips/).
 
 ## About urine testing at home
 

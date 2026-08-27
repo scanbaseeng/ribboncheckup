@@ -84,7 +84,7 @@ Short definitions, in the order you are likely to meet them. Each links to the R
 
 ## Ribbon Checkup terms
 
-**Ribbon Checkup (.org).** This site. A health education publication from Ribbon Health Press, a Scanbase, Inc. company. [About](/about/).
+**Ribbon Checkup (.org).** This site. A health education publication from Ribbon Health Press. [About](/about/).
 
 **Ribbon Checkup (.com).** The product site for Ribbon Checkup home urine tests, with the account portal at app.ribboncheckup.com and support at support.ribboncheckup.com. [Which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/).
 
