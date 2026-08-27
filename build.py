@@ -236,8 +236,8 @@ def build():
     body = f"""<section class="bleed hero-photo" style="background-image:url('{img_url(HERO, 2400)}')">
   <div class="inner">
     <p class="eyebrow light">Ribbon Checkup</p>
-    <h1>Understand your health.<br><span>Make informed choices.</span></h1>
-    <p class="lede light">Plain explanations of the whole of health: exercise, food, sleep, tests, numbers, and screenings. What the evidence says, what it does not, and when to talk to someone.</p>
+    <h1>Life is a long ribbon.<br><span>Check on it often.</span></h1>
+    <p class="lede light">A small check today can change the whole length of it. Plain explanations of exercise, food, sleep, tests, numbers, and screenings. What the evidence says, what it does not, and when to talk to someone.</p>
     <div class="cta">
       <a class="btn" href="/{lead['section']}/{lead['slug']}/">Start here</a>
       <a class="btn ghost light" href="/preventive-health/">Preventive checklist</a>
