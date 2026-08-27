@@ -103,9 +103,10 @@ th{font-weight:700;background:var(--bg2)}
 .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--accent);margin-left:.4em}
 
 footer{border-top:1px solid var(--line);margin-top:2rem;padding:2.5rem clamp(1rem,4vw,3rem) 2rem;color:var(--ink2);font-size:.92rem;background:var(--bg2)}
-.footgrid{display:grid;grid-template-columns:1.4fr 2fr;gap:3rem;max-width:74rem;margin:0 auto}
+.footgrid{display:grid;grid-template-columns:1fr 3fr;gap:3rem;max-width:74rem;margin:0 auto}
+@media (max-width:1000px){.footgrid{grid-template-columns:1fr}.cols{grid-template-columns:repeat(3,1fr)}}
 .footblurb{font-size:.85rem;color:var(--muted);max-width:26rem}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.cols{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
 .cols div{display:flex;flex-direction:column;gap:.45rem;font-size:.9rem}
 .cols strong{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.3rem}
 .cols a{text-decoration:none}
@@ -125,7 +126,7 @@ footer{border-top:1px solid var(--line);margin-top:2rem;padding:2.5rem clamp(1re
   .pillars{grid-template-columns:1fr}
   .note{padding:1.5rem}
   .sechead{flex-direction:column;align-items:flex-start}
-  .cols{grid-template-columns:1fr;gap:1.5rem}
+  .cols{grid-template-columns:1fr 1fr;gap:1.5rem}
   .footgrid{grid-template-columns:1fr;gap:2rem}
   .toc ol{columns:1}
 }
