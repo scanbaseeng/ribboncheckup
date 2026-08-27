@@ -3,6 +3,8 @@ title: What Urine Color Tells You, and What It Does Not
 description: Pale, dark, red, orange, brown, cloudy, foamy. Which changes are hydration, which are food and pills, and which are worth a call.
 date: 2026-08-27
 order: 2
+image: 1620877138710-e086a5f24b46
+image_alt: A clear glass pitcher beside a drinking glass
 ---
 Urine color is the oldest health test there is. Physicians read it for two thousand years before there were labs. Most of what they concluded was wrong. But a few things about color are reliable, and they are worth knowing because you see the sample several times a day for free.
 

@@ -3,6 +3,8 @@ title: How to Use Home Health Tests Without Fooling Yourself
 description: Sensitivity, specificity, and base rates in plain terms. Why a positive result on a rare condition is often wrong, and what to do about it.
 date: 2026-08-27
 order: 3
+image: 1582133456304-2f5cb1c2afbb
+image_alt: A hand holding a smartphone against a dark background
 ---
 Home testing has never been better. You can measure blood pressure, blood sugar, A1C, cholesterol, urine albumin, ketones, and infection markers in your kitchen for a fraction of what a lab charges. The tests themselves are mostly good. The way people read them is mostly not.
 

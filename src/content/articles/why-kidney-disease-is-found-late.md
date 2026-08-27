@@ -3,6 +3,8 @@ title: Why Kidney Disease Is Found Late, and What Would Change That
 description: About one in seven US adults has chronic kidney disease. Most do not know. The test that finds it early costs a few dollars and is rarely ordered.
 date: 2026-08-27
 order: 1
+image: 1625690987114-86f5af994b49
+image_alt: An older couple walking together along a quiet road
 ---
 The Centers for Disease Control estimates that about 35 million American adults have chronic kidney disease. That is roughly one in seven. As many as nine in ten of them do not know it. Among people with the most severe form short of dialysis, a large share are still unaware.
 
