@@ -22,6 +22,10 @@ Every piece states what a test measures, the range that counts as normal, the co
 
 We are not a medical provider and nothing here is medical advice. See the [medical disclaimer](/disclaimer/).
 
+## Who publishes this site
+
+Ribbon Checkup (ribboncheckup.org) is published by Ribbon Health Press, a Scanbase, Inc. company. Scanbase is a health technology company that also operates ribboncheckup.com, the product site for Ribbon Checkup home urine tests. This site is editorial. It does not sell anything. If you are looking for the product, your account, or customer support, see [Ribbon Checkup .org and .com: which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/).
+
 ## Contact
 
 Corrections, questions, and topic requests: editors@ribboncheckup.org

@@ -28,4 +28,4 @@ If you find an error, write to editors@ribboncheckup.org with the page and the c
 
 ## Ownership
 
-Ribbon Checkup is published by [publisher name to be confirmed]. This line will be updated with the operating entity before launch.
+Ribbon Checkup (ribboncheckup.org) is published by Ribbon Health Press, a Scanbase, Inc. company. Scanbase also operates ribboncheckup.com, which sells Ribbon Checkup home urine tests. The two sites are separate. This site does not sell products, does not carry affiliate links, and does not favor Scanbase products in its content. Where a piece discusses a category of test that Scanbase sells, that fact is stated on the page.
