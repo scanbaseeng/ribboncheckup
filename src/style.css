@@ -118,8 +118,10 @@ footer{border-top:1px solid var(--line);margin-top:2rem;padding:2.5rem clamp(1re
   .heromark{display:none}
 }
 @media (max-width:640px){
-  header.top{flex-direction:column;align-items:flex-start;gap:.6rem}
-  nav{gap:.8rem}nav a{font-size:.82rem}
+  header.top{flex-direction:column;align-items:flex-start;gap:.5rem;position:static;padding-bottom:.6rem}
+  nav{gap:1rem;flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:.2rem;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{font-size:.85rem;white-space:nowrap}
   .pillars{grid-template-columns:1fr}
   .note{padding:1.5rem}
   .sechead{flex-direction:column;align-items:flex-start}
@@ -162,6 +164,7 @@ footer{border-top:1px solid var(--line);margin-top:2rem;padding:2.5rem clamp(1re
 
 .secblock{margin:0}
 .secblock .inner{padding-top:3rem;padding-bottom:3rem}
+.secblock:not(.tint) .inner{padding-left:0;padding-right:0;max-width:none}
 .secblock.tint{width:100vw;margin-left:calc(50% - 50vw);background:var(--bg2)}
 .secblock.tint .card{border-color:transparent;box-shadow:0 1px 3px rgba(13,27,75,.06)}
 .sechead h2{font-size:clamp(1.4rem,2.3vw,2rem);margin:0;max-width:32rem}
