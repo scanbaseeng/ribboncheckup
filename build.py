@@ -8,6 +8,7 @@ SRC = ROOT / "src"
 OUT = ROOT / "site"
 DOMAIN = "https://ribboncheckup.org"
 SITE_NAME = "Ribbon Checkup"
+PUBLISHER = "Ribbon Health Press"
 TAGLINE = "Understand your health. Make informed choices."
 
 SECTIONS = {
@@ -73,10 +74,18 @@ def parse(path: Path):
     meta["words"] = len(re.findall(r"\w+", meta["body"]))
     return meta
 
+def img_url(pid, w=1600):
+    return f"https://images.unsplash.com/photo-{pid}?auto=format&fit=crop&w={w}&q=80"
+
+def hero_figure(a, cls="hero-img"):
+    if not a.get("image"): return ""
+    pid, alt = a["image"], html.escape(a.get("image_alt", ""))
+    return f"""<figure class="{cls}"><img src="{img_url(pid)}" srcset="{img_url(pid,800)} 800w, {img_url(pid,1200)} 1200w, {img_url(pid,1600)} 1600w, {img_url(pid,2400)} 2400w" sizes="(max-width: 48rem) 100vw, 44rem" alt="{alt}" loading="eager" decoding="async"><figcaption>{alt}. Photograph via <a href="https://unsplash.com" rel="noopener">Unsplash</a>.</figcaption></figure>"""
+
 def nav_links(active=None):
     return "".join(f'<a href="/{k}/"{" class=on" if k == active else ""}>{v["name"]}</a>' for k, v in SECTIONS.items())
 
-def layout(title, description, body, url, extra_head="", kind="website", active=None):
+def layout(title, description, body, url, extra_head="", kind="website", active=None, og_image=None):
     year = datetime.date.today().year
     foot_sections = "".join(f'<a href="/{k}/">{v["name"]}</a>' for k, v in SECTIONS.items())
     return f"""<!DOCTYPE html>
@@ -92,7 +101,8 @@ def layout(title, description, body, url, extra_head="", kind="website", active=
 <meta property="og:description" content="{html.escape(description)}">
 <meta property="og:url" content="{url}">
 <meta property="og:site_name" content="{SITE_NAME}">
-<meta property="og:image" content="{DOMAIN}/mark.png">
+<meta property="og:image" content="{og_image or DOMAIN + "/mark.png"}">
+<meta name="twitter:card" content="{"summary_large_image" if og_image else "summary"}">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,18 +129,19 @@ def layout(title, description, body, url, extra_head="", kind="website", active=
       <div><a href="/about/">About</a><a href="/editorial-policy/">Editorial policy</a><a href="/disclaimer/">Medical disclaimer</a><a href="/privacy/">Privacy</a></div>
     </div>
   </div>
-  <p class="fine">Content on this site is general health information. It is not medical advice and does not replace a clinician. &copy; {year} {SITE_NAME}.</p>
+  <p class="fine">Ribbon Checkup (ribboncheckup.org) is published by {PUBLISHER}, a Scanbase, Inc. company. Content on this site is general health information. It is not medical advice and does not replace a clinician. &copy; {year} {PUBLISHER}.</p>
 </footer>
 </body>
 </html>"""
 
 def card(a, big=False):
     s = SECTIONS[a["section"]]
+    thumb = f'<img class="thumb" src="{img_url(a["image"], 800)}" alt="" loading="lazy" decoding="async">' if a.get("image") else ""
     return f"""<a class="card {s['color']}{' big' if big else ''}" href="/{a['section']}/{a['slug']}/">
-  <span class="eyebrow">{s['name']}</span>
+  {thumb}<div class="cardbody"><span class="eyebrow">{s['name']}</span>
   <h3>{html.escape(a['title'])}</h3>
   <p>{html.escape(a['description'])}</p>
-  <span class="meta">{a['words'] // 200 + 1} min read</span>
+  <span class="meta">{a['words'] // 200 + 1} min read</span></div>
 </a>"""
 
 def article_page(a, all_articles):
@@ -142,24 +153,25 @@ def article_page(a, all_articles):
     rel_html = "".join(f'<li><a href="/{r["section"]}/{r["slug"]}/">{html.escape(r["title"])}</a> <span class="tag {SECTIONS[r["section"]]["color"]}">{SECTIONS[r["section"]]["name"]}</span></li>' for r in related)
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["description"],
           "datePublished": a["date"], "dateModified": a.get("updated", a["date"]),
-          "author": {"@type": "Organization", "name": SITE_NAME}, "publisher": {"@type": "Organization", "name": SITE_NAME},
-          "mainEntityOfPage": url, "articleSection": s["name"]}
+          "author": {"@type": "Organization", "name": PUBLISHER}, "publisher": {"@type": "Organization", "name": PUBLISHER, "url": DOMAIN + "/about/"},
+          "mainEntityOfPage": url, "articleSection": s["name"], **({"image": img_url(a["image"], 1200)} if a.get("image") else {})}
     body = f"""
 <article class="post {s['color']}">
   <p class="eyebrow"><a href="/{a['section']}/">{s['name']}</a> &middot; {a['date']} &middot; {a['words'] // 200 + 1} min read</p>
   <h1>{html.escape(a['title'])}</h1>
   <p class="lede">{html.escape(a['description'])}</p>
+  {hero_figure(a)}
   <div class="prose">
 {md_to_html(a['body'])}
   </div>
-  <p class="reviewed">Reviewed against current clinical guidelines at publication. Report an error: <a href="mailto:editors@ribboncheckup.org">editors@ribboncheckup.org</a>. See our <a href="/editorial-policy/">editorial policy</a>.</p>
+  <p class="reviewed">By the {PUBLISHER} editorial team. Reviewed against current clinical guidelines at publication. Report an error: <a href="mailto:editors@ribboncheckup.org">editors@ribboncheckup.org</a>. See our <a href="/editorial-policy/">editorial policy</a>.</p>
   <aside class="related">
     <h2>Keep reading</h2>
     <ul>{rel_html}</ul>
   </aside>
 </article>"""
     extra = f'<script type="application/ld+json">{json.dumps(ld)}</script>'
-    return layout(f"{a['title']} | {SITE_NAME}", a["description"], body, url, extra, "article", a["section"])
+    return layout(f"{a['title']} | {SITE_NAME}", a["description"], body, url, extra, "article", a["section"], og_image=img_url(a["image"], 1200) if a.get("image") else None)
 
 def build():
     if OUT.exists(): shutil.rmtree(OUT)
@@ -184,41 +196,61 @@ def build():
     for k, s in SECTIONS.items():
         items = [a for a in articles if a["section"] == k]
         cards = "\n".join(card(a) for a in items)
-        body = f"""<section class="hero small {s['color']}"><p class="eyebrow">Section</p><h1>{s['name']}</h1><p class="lede">{s['blurb']}</p></section>
+        hero_pid = items[0]["image"] if items and items[0].get("image") else None
+        hero_style = f' style="background-image:url(\'{img_url(hero_pid, 2400)}\')"' if hero_pid else ""
+        body = f"""<section class="bleed hero-photo small {s['color']}"{hero_style}><div class="inner"><p class="eyebrow light">Section</p><h1>{s['name']}</h1><p class="lede light">{s['blurb']}</p></div></section>
 <section class="grid">{cards}</section>"""
         (OUT / k).mkdir(exist_ok=True)
         (OUT / k / "index.html").write_text(layout(f"{s['name']} | {SITE_NAME}", s["blurb"], body, f"{DOMAIN}/{k}/", active=k))
 
     # home
     by_sec = {k: [a for a in articles if a["section"] == k] for k in SECTIONS}
-    lead = by_sec["guides"][0]
+    lead = next(a for a in articles if a["slug"] == "how-to-choose-a-urine-test-kit")
+    feat = next(a for a in articles if a["slug"] == "why-kidney-disease-is-found-late")
+    feat2 = [next(a for a in articles if a["slug"] == s) for s in ("how-to-use-home-health-tests-without-fooling-yourself", "preventive-screenings-by-decade", "how-to-take-blood-pressure-at-home")]
+    HERO = "1606206591513-adbfbdd7a177"
+    BAND = "1625690987114-86f5af994b49"
     sec_blocks = ""
-    for k, s in SECTIONS.items():
+    for i, (k, s) in enumerate(SECTIONS.items()):
         items = by_sec[k][:3]
-        sec_blocks += f"""<section class="secblock {s['color']}">
-  <div class="sechead"><div><p class="eyebrow">{s['name']}</p><p class="blurb">{s['blurb']}</p></div><a class="more" href="/{k}/">All {s['name'].lower()} &rarr;</a></div>
+        sec_blocks += f"""<section class="secblock {s['color']}{' tint' if i % 2 else ''}">
+  <div class="inner">
+  <div class="sechead"><div><p class="eyebrow">{s['name']}</p><h2>{s['blurb']}</h2></div><a class="more" href="/{k}/">All {s['name'].lower()} &rarr;</a></div>
   <div class="grid three">{''.join(card(a) for a in items)}</div>
+  </div>
 </section>"""
-    body = f"""<section class="hero home">
-  <div class="herotext">
+    body = f"""<section class="bleed hero-photo" style="background-image:url('{img_url(HERO, 2400)}')">
+  <div class="inner">
+    <p class="eyebrow light">Ribbon Checkup</p>
     <h1>Understand your health.<br><span>Make informed choices.</span></h1>
-    <p class="lede">Plain explanations of tests, numbers, and screenings. What a result means, what it does not, and when to talk to someone.</p>
+    <p class="lede light">Plain explanations of tests, numbers, and screenings. What a result means, what it does not, and when to talk to someone.</p>
     <div class="cta">
       <a class="btn" href="/{lead['section']}/{lead['slug']}/">Start here</a>
-      <a class="btn ghost" href="/preventive-health/">Preventive checklist</a>
+      <a class="btn ghost light" href="/preventive-health/">Preventive checklist</a>
     </div>
   </div>
-  <img class="heromark" src="/mark.png" alt="" width="220" height="300">
 </section>
 <section class="pillars">
   {''.join(f'<a href="/{k}/" class="pillar {s["color"]}"><strong>{s["name"]}</strong><span>{s["blurb"]}</span></a>' for k, s in SECTIONS.items())}
 </section>
+<section class="featured">
+  <a class="featmain {SECTIONS[feat['section']]['color']}" href="/{feat['section']}/{feat['slug']}/">
+    <img src="{img_url(feat['image'], 1600)}" alt="" loading="eager">
+    <div class="featbody"><span class="eyebrow light">{SECTIONS[feat['section']]['name']}</span><h2>{html.escape(feat['title'])}</h2><p>{html.escape(feat['description'])}</p></div>
+  </a>
+  <div class="featlist">
+    <p class="eyebrow">Most useful first</p>
+    {''.join(f'<a class="featrow {SECTIONS[a["section"]]["color"]}" href="/{a["section"]}/{a["slug"]}/"><img src="{img_url(a["image"], 400)}" alt="" loading="lazy"><span><em>{SECTIONS[a["section"]]["name"]}</em><strong>{html.escape(a["title"])}</strong></span></a>' for a in feat2)}
+  </div>
+</section>
 {sec_blocks}
-<section class="note">
-  <h2>How we write</h2>
-  <p>Every piece says what a test or number measures, the range that counts as normal, the common reasons it reads wrong, and the point at which a home result should become a conversation with a clinician. No miracle claims. No product pitches inside the content. Read the <a href="/editorial-policy/">editorial policy</a>.</p>
+<section class="bleed band" style="background-image:url('{img_url(BAND, 2400)}')">
+  <div class="inner">
+    <blockquote>Every piece says what a test measures, the range that counts as normal, the common reasons it reads wrong, and the point at which a home result should become a conversation with a clinician.</blockquote>
+    <p><a href="/editorial-policy/">How we write &rarr;</a></p>
+  </div>
 </section>"""
-    (OUT / "index.html").write_text(layout(f"{SITE_NAME}: {TAGLINE}", "Plain explanations of health tests, lab numbers, and preventive screenings. What a result means, what it does not, and when to see a clinician.", body, f"{DOMAIN}/"))
+    (OUT / "index.html").write_text(layout(f"{SITE_NAME}: {TAGLINE}", "Plain explanations of health tests, lab numbers, and preventive screenings. What a result means, what it does not, and when to see a clinician.", body, f"{DOMAIN}/", og_image=img_url(HERO, 1200)))
 
     # static pages
     for p in (SRC / "pages").glob("*.md"):
