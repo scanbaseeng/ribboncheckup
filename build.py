@@ -21,7 +21,7 @@ SECTIONS = {
 def md_to_html(md: str) -> str:
     out, buf, mode = [], [], None
     def inline(s):
-        s = html.escape(s, quote=False)
+        s = html.escape(s, quote=False).replace("&lt;br&gt;", "<br>")
         s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
         s = re.sub(r"(?<!\*)\*(?!\*)(.+?)\*", r"<em>\1</em>", s)
         s = re.sub(r"\[(.+?)\]\((.+?)\)", r'<a href="\2">\1</a>', s)
