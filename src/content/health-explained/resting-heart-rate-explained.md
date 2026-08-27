@@ -3,8 +3,8 @@ title: Resting Heart Rate: What the Number Tells You
 description: Every wearable reports it and few people know what to do with it. The normal range, what drives it up and down, why the trend matters more than the value, and when a number is worth a visit.
 date: 2026-08-29
 order: 1
-image: 1664475361436-e37f6f2ba407
-image_alt: A cyclist on a quiet road at dawn
+image: 1541625602330-2277a4c46182
+image_alt: Two cyclists riding a coastal road
 ---
 Resting heart rate is the number of times the heart beats per minute when you are awake, still, and calm. It is the oldest vital sign, the easiest to measure, and, since wrist wearables started reporting it, the most widely tracked health number in the world. It is also more informative than its simplicity suggests, provided it is read the right way.
 

@@ -3,8 +3,8 @@ title: VO2 Max and Cardiorespiratory Fitness, Explained
 description: The single measurement that predicts lifespan better than blood pressure, cholesterol, or smoking status. What it is, what the ranges mean by age, how watches estimate it, and how to raise it.
 date: 2026-08-29
 order: 2
-image: 1677002240252-af3f88114efc
-image_alt: A hiker on a mountain trail above the clouds
+image: 1562593028-1fe2d15bde36
+image_alt: A hiker on a forest trail in the mountains
 ---
 If a clinic could measure only one thing to predict how long a person would live, the best candidate is not blood pressure, cholesterol, or weight. It is cardiorespiratory fitness, and the standard measure of it is VO2 max: the maximum volume of oxygen the body can use per minute during hard exercise, expressed in milliliters per kilogram of body weight per minute.
 

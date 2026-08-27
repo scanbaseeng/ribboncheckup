@@ -3,8 +3,8 @@ title: The Mediterranean Diet, Explained Without the Hype
 description: It is the most studied eating pattern in the world and the only one with a large randomized trial behind it. What it actually consists of, what the trial found, and what people get wrong about it.
 date: 2026-08-29
 order: 3
-image: 1676450469609-9ea04cb3a0ac
-image_alt: Olive oil, tomatoes, and bread on a rustic table
+image: 1506280754576-f6fa8a873550
+image_alt: Toast topped with tomatoes and herbs
 ---
 The Mediterranean diet has topped the US News ranking of diets for most of the last decade and is the pattern recommended by the American Heart Association, the American Diabetes Association, and the Dietary Guidelines for Americans. It has one thing no other named diet has: a large randomized controlled trial showing that it prevents heart attacks and strokes.
 
