@@ -2,21 +2,21 @@
 title: About Ribbon Checkup
 description: What ribboncheckup.org is, what it covers, and how it is written.
 ---
-Ribbon Checkup is a health education site. We explain the tests, numbers, and screenings that come up in ordinary adult health care, in plain language, with the ranges and the caveats that product pages and lab reports leave out.
+Ribbon Checkup is a health education site. We cover the whole of ordinary adult health: exercise, food, sleep, weight, the tests and numbers that come up in a checkup, and the screenings that catch problems early. Everything is written in plain language, with the ranges, the trade offs, and the caveats that headlines and product pages leave out.
 
 ## The four sections
 
-**Articles** are reported pieces on how the body works, what the evidence says, and what changed.
+**Articles** are reported pieces on how the body works, what the evidence says about food, movement, sleep, and medicine, and what changed.
 
-**Guides** are step by step. How to test, how to read a result, how to choose between options.
+**Guides** are step by step. How to start running, how to build a strength routine, how to fix a sleep schedule, how to read a label, how to test something at home and read the result.
 
-**Health Explained** takes one number at a time, from a lab report or a test strip, and says what it measures, what is normal, and what makes it read wrong.
+**Health Explained** takes one number at a time, from a lab report, a fitness tracker, or a test strip, and says what it measures, what is normal, and what makes it read wrong.
 
-**Preventive Health** covers what to check, how often, and why. The screenings that change outcomes.
+**Preventive Health** covers what to check, how often, and why. The screenings, vaccines, and habits that change outcomes.
 
 ## How we write
 
-Every piece states what a test measures, the range that counts as normal, the common reasons it misreads, and the point at which a home result should become a conversation with a clinician. We do not make miracle claims. We do not run product pitches inside the content. Where guidelines disagree, we say so and name the sources. Read the full [editorial policy](/editorial-policy/).
+Every piece states what the evidence supports, where it is thin, what counts as normal, and the point at which a question about your health should become a conversation with a clinician. We do not make miracle claims. We do not sell diets, supplements, or programs. We do not run product pitches inside the content. Where guidelines disagree, we say so and name the sources. Read the full [editorial policy](/editorial-policy/).
 
 ## What we are not
 

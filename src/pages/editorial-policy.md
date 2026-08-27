@@ -4,7 +4,7 @@ description: How Ribbon Checkup content is sourced, written, reviewed, and corre
 ---
 ## Sources
 
-Clinical claims are drawn from current guidelines of US and international bodies, including the US Preventive Services Task Force, the American Diabetes Association, the American Heart Association and American College of Cardiology, the American Cancer Society, KDIGO for kidney disease, the American College of Gastroenterology, and the Centers for Disease Control and Prevention, along with peer reviewed studies where guidelines are silent. Where a guideline has changed recently, we say which version we follow.
+Clinical claims are drawn from current guidelines of US and international bodies, including the US Preventive Services Task Force, the American Diabetes Association, the American Heart Association and American College of Cardiology, the American Cancer Society, KDIGO for kidney disease, the American College of Gastroenterology, the Centers for Disease Control and Prevention, the World Health Organization, and the Physical Activity Guidelines for Americans and Dietary Guidelines for Americans, along with peer reviewed studies where guidelines are silent. Where a guideline has changed recently, we say which version we follow.
 
 ## Ranges and numbers
 
@@ -16,7 +16,7 @@ We write in short sentences without jargon where a plain word exists. Where a te
 
 ## Products and money
 
-Content does not contain product endorsements or affiliate links. If that policy changes, every affected page will disclose it at the top, and this page will be updated first.
+Content does not contain product endorsements, affiliate links, or paid placements for supplements, diets, fitness programs, or devices. If that policy changes, every affected page will disclose it at the top, and this page will be updated first.
 
 ## Review and updates
 

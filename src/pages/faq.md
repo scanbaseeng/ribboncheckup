@@ -1,13 +1,13 @@
 ---
 title: Ribbon Checkup FAQ
-description: Answers to the questions people bring to Ribbon Checkup most often, about the site and about reading a urine test at home.
+description: Answers to the questions people bring to Ribbon Checkup most often, about the site, about everyday health, and about reading a test at home.
 schema: faq
 ---
 ## About this site
 
 ### What is Ribbon Checkup?
 
-Ribbon Checkup is two things that share a name. Ribboncheckup.org, this site, is a health education publication from Ribbon Health Press. It explains urine tests, lab numbers, and preventive screenings in plain language. Ribboncheckup.com is the site for the Ribbon Checkup home urine test product. [Which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/) explains the split.
+Ribbon Checkup is two things that share a name. Ribboncheckup.org, this site, is a health education publication from Ribbon Health Press. It explains exercise, food, sleep, tests, lab numbers, and preventive screenings in plain language. Ribboncheckup.com is the site for the Ribbon Checkup home urine test product. [Which site is which](/articles/ribbon-checkup-org-and-com-which-site-is-which/) explains the split.
 
 ### Is the content on ribboncheckup.org medical advice?
 
