@@ -4,8 +4,8 @@ description: Why the protein pad on a dipstick misses early kidney damage, what 
 
 date: 2026-08-27
 order: 2
-image: 1518152006812-edab29b069ac
-image_alt: A white microscope on a black laboratory bench
+image: 1581594549595-35f6edc7b762
+image_alt: Gloved hands drawing liquid from a vial in a laboratory
 ---
 Kidney disease is quiet. It usually produces no symptoms until most of the function is gone. The earliest reliable warning is a small amount of albumin leaking into urine. Catching it early is the entire game. The wrong test misses it.
 

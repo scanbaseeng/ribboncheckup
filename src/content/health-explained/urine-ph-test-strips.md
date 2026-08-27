@@ -4,8 +4,8 @@ description: What urine pH actually tracks, why the "alkaline body" claims do no
 
 date: 2026-08-27
 order: 4
-image: 1768926428939-d071a32956e8
-image_alt: Water droplets on glass against an evening sky
+image: 1474222300086-56f8a438e47d
+image_alt: Lemon slices floating in clear water
 ---
 Urine pH strips are the simplest kit sold. One pad, one number. They are also the kit most often sold on a false premise. This guide covers what the number means and what it does not.
 
