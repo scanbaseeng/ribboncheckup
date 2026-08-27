@@ -4,8 +4,8 @@ description: The technique. Collection, dipping, timing, lighting, and the seven
 
 date: 2026-08-27
 order: 3
-image: 1532187863486-abf9dbad1b69
-image_alt: A pipette dispensing liquid into a tray of clear tubes
+image: 1614935151651-0bea6508db6b
+image_alt: A scientist using a pipette over a rack of test tubes
 ---
 The strip is rarely the problem. The reading is. A dipstick is a timed chemical reaction read by eye against a printed chart. Every step has a way to go wrong. Here is the full procedure, then the mistakes we see most.
 

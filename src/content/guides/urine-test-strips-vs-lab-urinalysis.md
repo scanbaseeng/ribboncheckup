@@ -3,8 +3,8 @@ title: Urine Test Strips vs. a Lab Urinalysis: What You Give Up and What You Kee
 description: A home strip and a clinical urinalysis measure many of the same things. The differences are in precision, the microscope, and what happens after.
 date: 2026-08-28
 order: 5
-image: 1606206591513-adbfbdd7a177
-image_alt: Rows of blood collection tubes with colorful caps
+image: 1579165466991-467135ad3110
+image_alt: A technician in purple gloves inspecting a sample vial
 ---
 A urinalysis is one of the most ordered tests in medicine. A home urine test strip is the same chemistry in a retail bottle. People often ask whether the strip is as good as the lab. The answer is that they are different tools, and knowing exactly where they diverge tells you when each one is the right call.
 

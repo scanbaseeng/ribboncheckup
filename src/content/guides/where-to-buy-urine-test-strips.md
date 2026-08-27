@@ -4,8 +4,8 @@ description: Pharmacy versus online, what "FDA cleared" and "CLIA waived" mean o
 
 date: 2026-08-27
 order: 4
-image: 1581594693702-fbdc51b2763b
-image_alt: Sample tubes with colored caps in a laboratory rack
+image: 1761322572550-967ea8c0bfd9
+image_alt: An open notebook with a pen and pencils on a wooden desk
 ---
 Urine test strips are sold in pharmacies, big box stores, medical supply sites, and every large online marketplace. Prices vary by a factor of five for the same chemistry. Quality varies more. This guide covers where to buy and what the label terms mean.
 

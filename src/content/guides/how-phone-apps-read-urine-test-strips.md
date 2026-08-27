@@ -6,7 +6,7 @@ order: 6
 image: 1529653762956-b0a27278529c
 image_alt: A person holding a smartphone in one hand
 ---
-Reading a urine test strip by eye is the weakest step in home testing. Colors are matched under mixed light against a printed chart, at a time you estimate, by a person who wants a particular answer. Phone based readers replace that step with a camera and software. Several home test brands, including Ribbon Checkup and others, now sell strips designed to be read this way.
+Reading a urine test strip by eye is the weakest step in home testing. Colors are matched under mixed light against a printed chart, at a time you estimate, by a person who wants a particular answer. Phone based readers replace that step with a camera and software. Several home test brands now sell strips designed to be read this way.
 
 The approach is sound. It is also not magic. Knowing how it works tells you how to get a clean read.
 
@@ -51,4 +51,4 @@ Standard strips read by eye still work, and they cost less. For a one time check
 
 For reading technique that applies either way, see [how to read urine test strip results](/guides/how-to-read-urine-test-strip-results/). For what the pads measure, see [what a 10 parameter dipstick measures](/health-explained/what-a-10-parameter-dipstick-measures/).
 
-*Disclosure: Scanbase, Inc., which publishes this site through Ribbon Health Press, also sells app read urine tests under the Ribbon Checkup name at ribboncheckup.com. This piece describes how the category works and does not evaluate any specific product.*
+*This piece describes how the category works and does not evaluate any specific product.*
