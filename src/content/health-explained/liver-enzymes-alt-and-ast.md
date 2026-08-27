@@ -3,6 +3,8 @@ title: Liver Enzymes: ALT, AST, and What an Elevated Result Means
 description: The two enzymes on every metabolic panel, the ranges labs use, the usual causes of a high result, and what happens next.
 date: 2026-08-27
 order: 6
+image: 1674702727317-d29b2788dc4a
+image_alt: A stethoscope resting on a white sheet, in black and white
 ---
 ALT and AST show up on the comprehensive metabolic panel that most people get at a yearly visit. A mild elevation is one of the most common abnormal lab results in adults. It is also one of the most common reasons for an unnecessary panic. This guide covers what the numbers measure and how clinicians actually handle them.
 

@@ -4,6 +4,8 @@ description: The ten pads on a standard urine test strip, what each one detects,
 
 date: 2026-08-27
 order: 1
+image: 1606206591513-adbfbdd7a177
+image_alt: Rows of blood collection tubes with colorful caps
 ---
 The standard urine dipstick has ten reagent pads. Each pad holds a dry chemical that changes color when it meets a specific substance in urine. You dip the strip, wait, and match each pad to a color chart. Clinics have used this format for decades. The home versions are the same chemistry in a retail bottle.
 

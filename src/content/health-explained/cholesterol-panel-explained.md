@@ -3,6 +3,8 @@ title: The Cholesterol Panel Explained
 description: Total, LDL, HDL, triglycerides, and the newer numbers on the report. What each one means and why the target depends on you.
 date: 2026-08-27
 order: 5
+image: 1655313719493-16ebe4906441
+image_alt: A stethoscope laid on a pale blue surface
 ---
 A lipid panel is four numbers, sometimes six. Most people look at total cholesterol, see it is under 200, and move on. That misses most of the information on the page. Here is what each line means and how the targets are actually set.
 
