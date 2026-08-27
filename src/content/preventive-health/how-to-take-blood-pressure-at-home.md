@@ -3,6 +3,8 @@ title: How to Take Blood Pressure at Home
 description: The cuff to buy, the position to sit in, the schedule to follow, and the numbers that mean call someone.
 date: 2026-08-27
 order: 2
+image: 1700832082152-0416a3ee5e60
+image_alt: A stethoscope and blood pressure cuff laid on a bed
 ---
 Home blood pressure readings are often more useful than clinic readings. They are taken more often, in a calmer setting, and they catch the people whose pressure runs high only at the doctor's office and the people whose pressure runs high only everywhere else. Guidelines now treat a good home log as the standard for diagnosing and managing hypertension.
 

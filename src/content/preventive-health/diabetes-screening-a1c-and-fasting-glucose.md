@@ -3,6 +3,8 @@ title: Diabetes Screening: A1C, Fasting Glucose, and Who Should Be Tested
 description: The two tests, the cutoffs for prediabetes and diabetes, when to start screening, and the situations where A1C misleads.
 date: 2026-08-27
 order: 3
+image: 1758691461990-03b49d969495
+image_alt: A doctor writing on a patient chart
 ---
 About one in three American adults has prediabetes. Most do not know it. The number who progress to type 2 diabetes each year is large and mostly preventable. The screening is one blood test. This guide covers which test, what the numbers mean, and who should be getting it.
 

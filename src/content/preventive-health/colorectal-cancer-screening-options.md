@@ -3,6 +3,8 @@ title: Colorectal Cancer Screening Options: Colonoscopy, FIT, and Stool DNA
 description: The screening starts at 45. Here is how the home stool tests compare to colonoscopy, and how to pick one you will actually do.
 date: 2026-08-27
 order: 4
+image: 1758691461935-202e2ef6b69f
+image_alt: A doctor talking with a patient in an office
 ---
 Colorectal cancer is the second leading cause of cancer death in the United States and one of the most preventable. It grows slowly from polyps that can be found and removed years before they turn into cancer. Screening works. The problem is that about a third of eligible adults are not up to date.
 

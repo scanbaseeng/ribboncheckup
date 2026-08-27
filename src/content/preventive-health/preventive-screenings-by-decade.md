@@ -3,6 +3,8 @@ title: Preventive Screenings by Decade
 description: What US guidelines recommend checking in your 20s, 30s, 40s, 50s, and 60s and beyond, and why the list changes with age.
 date: 2026-08-27
 order: 1
+image: 1758691462858-f1286e5daf40
+image_alt: A doctor consulting with an older patient in an office
 ---
 Preventive screening is the set of tests done when you feel fine. The point is to find problems at the stage where treatment is easy and cheap. Most of the tests below come from the US Preventive Services Task Force (USPSTF), which grades the evidence behind each one, and from the major specialty societies. Guidelines change. Ask your clinician which apply to you.
 
