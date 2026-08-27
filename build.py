@@ -74,6 +74,9 @@ def parse(path: Path):
     meta["words"] = len(re.findall(r"\w+", meta["body"]))
     return meta
 
+import hashlib
+CSS_VER = hashlib.md5((SRC / "style.css").read_bytes()).hexdigest()[:8]
+
 def img_url(pid, w=1600):
     return f"https://images.unsplash.com/photo-{pid}?auto=format&fit=crop&w={w}&q=80"
 
@@ -106,8 +109,8 @@ def layout(title, description, body, url, extra_head="", kind="website", active=
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v={CSS_VER}">
 {extra_head}
 </head>
 <body>
@@ -120,13 +123,15 @@ def layout(title, description, body, url, extra_head="", kind="website", active=
 </main>
 <footer>
   <div class="footgrid">
-    <div>
+    <div class="footabout">
       <div class="brand small"><img src="/mark-small.png" alt="" width="20" height="27"><span class="wm"><b>Ribbon</b><i>checkup</i><em>.org</em></span></div>
       <p>{TAGLINE}</p>
+      <p class="footblurb">Ribbon Checkup is a health education publication from {PUBLISHER}. Plain explanations of urine tests, lab numbers, and preventive screenings, written to the standard in our editorial policy.</p>
     </div>
     <div class="cols">
-      <div>{foot_sections}</div>
-      <div><a href="/about/">About</a><a href="/editorial-policy/">Editorial policy</a><a href="/disclaimer/">Medical disclaimer</a><a href="/privacy/">Privacy</a></div>
+      <div><strong>Sections</strong>{foot_sections}</div>
+      <div><strong>Start here</strong><a href="/guides/how-to-choose-a-urine-test-kit/">Choosing a urine test kit</a><a href="/health-explained/what-a-10-parameter-dipstick-measures/">The 10 parameter dipstick</a><a href="/health-explained/kidney-health-urine-tests/">Kidney urine tests</a><a href="/preventive-health/preventive-screenings-by-decade/">Screenings by decade</a><a href="/glossary/">Glossary</a></div>
+      <div><strong>Ribbon Checkup</strong><a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/articles/ribbon-checkup-org-and-com-which-site-is-which/">.org vs .com</a><a href="/editorial-policy/">Editorial policy</a><a href="/disclaimer/">Medical disclaimer</a><a href="/privacy/">Privacy</a></div>
     </div>
   </div>
   <p class="fine">Ribbon Checkup (ribboncheckup.org) is published by {PUBLISHER}, a Scanbase, Inc. company. Content on this site is general health information. It is not medical advice and does not replace a clinician. &copy; {year} {PUBLISHER}.</p>
@@ -155,12 +160,18 @@ def article_page(a, all_articles):
           "datePublished": a["date"], "dateModified": a.get("updated", a["date"]),
           "author": {"@type": "Organization", "name": PUBLISHER}, "publisher": {"@type": "Organization", "name": PUBLISHER, "url": DOMAIN + "/about/"},
           "mainEntityOfPage": url, "articleSection": s["name"], **({"image": img_url(a["image"], 1200)} if a.get("image") else {})}
+    h2s = re.findall(r"^## (.+)$", a["body"], flags=re.M)
+    toc = ""
+    if len(h2s) >= 3:
+        items = "".join(f'<li><a href="#{re.sub(r"[^a-z0-9]+", "-", h.lower()).strip("-")}">{html.escape(h)}</a></li>' for h in h2s)
+        toc = f'<nav class="toc"><p class="eyebrow">In this piece</p><ol>{items}</ol></nav>'
     body = f"""
 <article class="post {s['color']}">
   <p class="eyebrow"><a href="/{a['section']}/">{s['name']}</a> &middot; {a['date']} &middot; {a['words'] // 200 + 1} min read</p>
   <h1>{html.escape(a['title'])}</h1>
   <p class="lede">{html.escape(a['description'])}</p>
   {hero_figure(a)}
+  {toc}
   <div class="prose">
 {md_to_html(a['body'])}
   </div>
@@ -212,7 +223,7 @@ def build():
     BAND = "1625690987114-86f5af994b49"
     sec_blocks = ""
     for i, (k, s) in enumerate(SECTIONS.items()):
-        items = by_sec[k][:3]
+        items = [x for x in by_sec[k] if x["slug"] not in (feat["slug"],) and x not in feat2][:3]
         sec_blocks += f"""<section class="secblock {s['color']}{' tint' if i % 2 else ''}">
   <div class="inner">
   <div class="sechead"><div><p class="eyebrow">{s['name']}</p><h2>{s['blurb']}</h2></div><a class="more" href="/{k}/">All {s['name'].lower()} &rarr;</a></div>
@@ -256,8 +267,14 @@ def build():
     for p in (SRC / "pages").glob("*.md"):
         a = parse(p)
         d = OUT / a["slug"]; d.mkdir(exist_ok=True)
-        body = f'<article class="post"><h1>{html.escape(a["title"])}</h1><div class="prose">{md_to_html(a["body"])}</div></article>'
-        (d / "index.html").write_text(layout(f"{a['title']} | {SITE_NAME}", a["description"], body, f"{DOMAIN}/{a['slug']}/"))
+        extra = ""
+        if a.get("schema") == "faq":
+            qa = re.findall(r"^### (.+?)\n\n(.+?)(?=\n\n|\Z)", a["body"], flags=re.M | re.S)
+            faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": q.strip(), "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"\[(.+?)\]\(.+?\)", r"\1", ans.strip())}} for q, ans in qa]}
+            extra = f'<script type="application/ld+json">{json.dumps(faq)}</script>'
+        body = f'<article class="post wide"><p class="eyebrow">{SITE_NAME}</p><h1>{html.escape(a["title"])}</h1><p class="lede">{html.escape(a["description"])}</p><div class="prose">{md_to_html(a["body"])}</div></article>'
+        (d / "index.html").write_text(layout(f"{a['title']} | {SITE_NAME}", a["description"], body, f"{DOMAIN}/{a['slug']}/", extra))
 
     body = '<section class="hero small"><h1>Page not found</h1><p class="lede">That link is dead. <a href="/">Back to the front page.</a></p></section>'
     (OUT / "404.html").write_text(layout(f"Not found | {SITE_NAME}", "Page not found.", body, f"{DOMAIN}/404.html"))
