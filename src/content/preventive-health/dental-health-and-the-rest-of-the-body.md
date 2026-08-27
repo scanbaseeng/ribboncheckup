@@ -3,8 +3,8 @@ title: Dental Health and the Rest of the Body
 description: Gum disease affects nearly half of adults and is linked to heart disease, diabetes, and pregnancy outcomes. What the links mean, the two minute habit that prevents most of it, and what a checkup should include.
 date: 2026-08-29
 order: 2
-image: 1679750866872-7bde2193b567
-image_alt: A toothbrush and a glass on a bathroom shelf
+image: 1520013573795-38516d2661e4
+image_alt: A red toothbrush against a blue background
 ---
 The mouth is usually treated as separate from the rest of medicine, with its own practitioners, its own insurance, and its own waiting rooms. The body does not observe the distinction. Nearly half of American adults over 30 have some degree of periodontal disease, and the evidence that it interacts with the rest of health has grown steadily for two decades.
 
